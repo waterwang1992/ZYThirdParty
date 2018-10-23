@@ -1,0 +1,6 @@
+framework module JollyPaySDK {
+  umbrella header "JollyPaySDK.h"
+
+  export *
+  module * { export * }
+}
