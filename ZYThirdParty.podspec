@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZYThirdParty"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "A short description of ZYThirdParty."
 
   # This description is used to generate tags and improve search results.
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
   # s.public_header_files = 'ZYThirdParty/**/*.h'
-  s.source_files = 'ZYThirdParty/{*.h,*.m,**/*.h,**/*.m}'
+  # s.source_files = 'ZYThirdParty/{*.h,*.m,**/*.h,**/*.m}'
   s.resources = 'ZYThirdParty/JollyPaySDK.framework/JPSDKBundle.bundle', 'ZYThirdParty/JollyWalletSDK.framework/JollyWalletSDK.bundle'
   s.libraries = 'xml2', 'z', 'sqlite3.0'
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
