@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZYThirdParty"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "A short description of ZYThirdParty."
 
   # This description is used to generate tags and improve search results.
@@ -90,10 +90,31 @@ Pod::Spec.new do |s|
   #
   # s.public_header_files = 'ZYThirdParty/**/*.h'
   # s.source_files = 'ZYThirdParty/{*.h,*.m,**/*.h,**/*.m}'
-  s.resources = 'ZYThirdParty/JollyPaySDK.framework/JPSDKBundle.bundle', 'ZYThirdParty/JollyWalletSDK.framework/JollyWalletSDK.bundle'
-  s.libraries = 'xml2', 'z', 'sqlite3.0'
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
-  s.vendored_frameworks = 'ZYThirdParty/TrustDefender.framework', 'ZYThirdParty/JollyPaySDK.framework', 'ZYThirdParty/JollyWalletSDK.framework'
+  # s.resources = 'ZYThirdParty/JollyPaySDK.framework/JPSDKBundle.bundle', 'ZYThirdParty/JollyWalletSDK.framework/JollyWalletSDK.bundle'
+  # s.libraries = 'xml2', 'z', 'sqlite3.0'
+  # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  # s.vendored_frameworks = 'ZYThirdParty/TrustDefender.framework', 'ZYThirdParty/JollyPaySDK.framework', 'ZYThirdParty/JollyWalletSDK.framework'
+
+  s.subspec 'TrustDefender' do |ss|
+  	ss.public_header_files = 'ZYThirdParty/TrustDefender.framework/**/*.h'
+  	ss.source_files = 'ZYThirdParty/TrustDefender.framework/{*.h,*.m,**/*.h,**/*.m}'
+  	ss.libraries = 'xml2', 'z', 'sqlite3.0'
+  	ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  end
+
+  s.subspec 'JollyPaySDK' do |ss|
+  	ss.public_header_files = 'ZYThirdParty/JollyPaySDK.framework/**/*.h'
+  	ss.source_files = 'ZYThirdParty/JollyPaySDK.framework/{*.h,*.m,**/*.h,**/*.m}'
+  	ss.libraries = 'xml2', 'z', 'sqlite3.0'
+  	ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  end
+  s.subspec 'JollyWalletSDK' do |ss|
+  	ss.public_header_files = 'ZYThirdParty/JollyWalletSDK.framework/**/*.h'
+  	ss.source_files = 'ZYThirdParty/JollyWalletSDK.framework/{*.h,*.m,**/*.h,**/*.m}'
+  	ss.libraries = 'xml2', 'z', 'sqlite3.0'
+  	ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  end
+
 
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
