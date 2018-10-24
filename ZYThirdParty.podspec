@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZYThirdParty"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "A short description of ZYThirdParty."
 
   # This description is used to generate tags and improve search results.
@@ -110,7 +110,7 @@ Pod::Spec.new do |s|
     ss.libraries = 'xml2', 'z', 'sqlite3.0'
     ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
     ss.vendored_frameworks = 'ZYThirdParty/JollyPaySDK.framework'
-    ss.dependency = 'TrustDefender'
+    ss.dependency = 'ZYThirdParty/TrustDefender'
   end
 
   s.subspec 'JollyWalletSDK' do |ss|
