@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZYThirdParty"
-  s.version      = "0.0.9"
+  s.version      = "0.0.10"
   s.summary      = "A short description of ZYThirdParty."
 
   # This description is used to generate tags and improve search results.
@@ -107,6 +107,7 @@ Pod::Spec.new do |s|
   s.subspec 'JollyPaySDK' do |ss|
     ss.public_header_files = 'ZYThirdParty/JollyPaySDK.framework/**/*.h'
     ss.source_files = 'ZYThirdParty/JollyPaySDK.framework/{*.h,*.m,**/*.h,**/*.m}'
+    ss.resources = 'ZYThirdParty/JollyPaySDK.framework/JPSDKBundle.bundle'
     ss.libraries = 'xml2', 'z', 'sqlite3.0'
     ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
     ss.vendored_frameworks = 'ZYThirdParty/JollyPaySDK.framework'
@@ -116,6 +117,7 @@ Pod::Spec.new do |s|
   s.subspec 'JollyWalletSDK' do |ss|
     ss.public_header_files = 'ZYThirdParty/JollyWalletSDK.framework/**/*.h'
     ss.source_files = 'ZYThirdParty/JollyWalletSDK.framework/{*.h,*.m,**/*.h,**/*.m}'
+    ss.resources = 'ZYThirdParty/JollyWalletSDK.framework/JPSDKBundle.bundle'
     ss.libraries = 'xml2', 'z', 'sqlite3.0'
     ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
     ss.vendored_frameworks = 'ZYThirdParty/JollyWalletSDK.framework'
