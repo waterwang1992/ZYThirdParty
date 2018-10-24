@@ -110,7 +110,7 @@ Pod::Spec.new do |s|
     ss.libraries = 'xml2', 'z', 'sqlite3.0'
     ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
     ss.vendored_frameworks = 'ZYThirdParty/JollyPaySDK.framework'
-    ss.dependency = 'ZYThirdParty/TrustDefender'
+    ss.dependency "ZYThirdParty/TrustDefender"
   end
 
   s.subspec 'JollyWalletSDK' do |ss|
