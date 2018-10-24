@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
   s.subspec 'JollyWalletSDK' do |ss|
     ss.public_header_files = 'ZYThirdParty/JollyWalletSDK.framework/**/*.h'
     ss.source_files = 'ZYThirdParty/JollyWalletSDK.framework/{*.h,*.m,**/*.h,**/*.m}'
-    ss.resources = 'ZYThirdParty/JollyWalletSDK.framework/JPSDKBundle.bundle'
+    ss.resources = 'ZYThirdParty/JollyWalletSDK.framework/JollyWalletSDK.bundle'
     ss.libraries = 'xml2', 'z', 'sqlite3.0'
     ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
     ss.vendored_frameworks = 'ZYThirdParty/JollyWalletSDK.framework'
